@@ -38,6 +38,15 @@ def ej1():
     # Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
 
+    fig = plt.figure()
+    fig.suptitle('Figura', fontsize=30)
+    ax = fig.add_subplot()
+    ax.plot(x, y, color='tab:purple', label='y1 = x**2')
+    ax.legend()
+    ax.grid()
+    plt.show()
+    print("Fin")
+
 
 def ej2():
     # Line Plot
@@ -130,7 +139,6 @@ def ej4():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    # ej2()
     # ej2()
     # ej3()
     # ej4()
