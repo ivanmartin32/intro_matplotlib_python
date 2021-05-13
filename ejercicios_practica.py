@@ -77,6 +77,16 @@ def ej2():
     # Cada función dibujarla con un color distinto
     # a su elección
 
+    fig = plt.figure()
+    fig.suptitle('Figura', fontsize=30)
+    ax = fig.add_subplot()
+    ax.plot(x, y1, color='tab:green', label='y1 = x**2')
+    ax.plot(x, y2, color='tab:pink', label='y2 = x**3')
+    ax.legend()
+    ax.grid()
+    plt.show()
+    print("Fin")
+
 
 def ej3():
     # Scatter Plot
@@ -139,6 +149,6 @@ def ej4():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
-    # ej2()
+    ej2()
     # ej3()
     # ej4()
