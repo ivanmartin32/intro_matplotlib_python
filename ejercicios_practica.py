@@ -39,7 +39,7 @@ def ej1():
     # Darle color a la línea a su elección
 
     fig = plt.figure()
-    fig.suptitle('Figura', fontsize=30)
+    fig.suptitle('Figura N°1', fontsize=30)
     ax = fig.add_subplot()
     ax.plot(x, y, color='tab:purple', label='y1 = x**2')
     ax.legend()
@@ -78,7 +78,7 @@ def ej2():
     # a su elección
 
     fig = plt.figure()
-    fig.suptitle('Figura', fontsize=30)
+    fig.suptitle('Figura N°2', fontsize=30)
     ax = fig.add_subplot()
     ax.plot(x, y1, color='tab:green', label='y1 = x**2')
     ax.plot(x, y2, color='tab:pink', label='y2 = x**3')
@@ -106,6 +106,20 @@ def ej3():
     # cada gráfico
 
     # Elegir un marker a elección
+
+    fig = plt.figure()
+    fig.suptitle('Figura N°3', fontsize=30)
+    ax1 = fig.add_subplot(1, 2, 1) 
+    ax2 = fig.add_subplot(1, 2, 2) 
+
+    ax1.plot(x, y, c='tab:blue')
+    ax1.legend('x')
+    ax1.grid()
+    ax2.scatter(x, y, c='tab:red')
+    ax2.legend('y')
+    ax2.grid()
+    plt.show()
+    print("Fin")
 
 
 def ej4():
@@ -150,5 +164,5 @@ if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
-    # ej3()
+    ej3()
     # ej4()
