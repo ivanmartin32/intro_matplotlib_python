@@ -112,11 +112,11 @@ def ej3():
     ax1 = fig.add_subplot(1, 2, 1) 
     ax2 = fig.add_subplot(1, 2, 2) 
 
-    ax1.plot(x, y, c='tab:blue')
-    ax1.legend('x')
+    ax1.plot(x, y, c='tab:blue', label='y = tanh')
+    ax1.legend()
     ax1.grid()
-    ax2.scatter(x, y, c='tab:red')
-    ax2.legend('y')
+    ax2.scatter(x, y, c='tab:red', label='y = tanh')
+    ax2.legend()
     ax2.grid()
     plt.show()
     print("Fin")
@@ -159,10 +159,27 @@ def ej4():
 
     # Colocar una grilla a elección
 
+    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+    fig.suptitle('Figura N°4', fontsize=30)
+    ax1.plot(x, y1, 'tab:blue')
+    ax1.set_title('y1 = x^2', fontsize=6)
+    ax1.grid(ls='dashed')
+    ax2.plot(x, y2, 'tab:orange')
+    ax2.set_title('y1 = x^3', fontsize=6)
+    ax2.grid(ls='dashdot')
+    ax3.plot(x, y3, 'tab:green')
+    ax3.set_title('y1 = x^4', fontsize=6)
+    ax3.grid(ls='dashed')
+    ax4.plot(x, y4, 'tab:red')
+    ax4.set_title('y4 = raiz_cuadrada', fontsize=6)
+    ax4.grid(ls='dashdot')
+    plt.show()
+    print("Fin")
+                                
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     ej1()
     ej2()
     ej3()
-    # ej4()
+    ej4()
